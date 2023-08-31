@@ -1,7 +1,11 @@
-import * as Styled from '../styles/globalStyles';
+import { Footer } from '../src/components/footerNavBar';
+import * as Styled from '../styles/homepageStyles';
 
 export default function Home() {
   return (
-    <Styled.NewDiv>Test Worked!</Styled.NewDiv>
+    <Styled.NewPage>
+      <Footer />
+
+    </Styled.NewPage>
   );
 }
