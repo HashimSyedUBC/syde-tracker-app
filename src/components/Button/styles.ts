@@ -1,14 +1,15 @@
-import styled from "styled-components";
-import { toRem } from "../../../src/utils/toRem";
-import { fonts, colors } from "../../../styles/theme";
+import styled from 'styled-components';
+import { toRem } from '../../utils/toRem';
+import { fonts, colors } from '../../../styles/theme';
 
 type ButtonLinkWrapperProps = {
   width: string;
 };
 
 export const ButtonTextWrapper = styled.p`
-  ${({ theme }) => (theme === "TextBoxHome" ? fonts.H200 : fonts.H100)};
-  padding-left: ${toRem(10)}; ;
+  ${({ theme }) => (theme === 'TextBoxHome' ? fonts.H200 : fonts.H100)};
+  padding-left: ${toRem(10)}; 
+  color: ${colors.defaultBlack};
 `;
 
 export const ButtonLinkWrapper = styled.a<ButtonLinkWrapperProps>`
@@ -19,7 +20,7 @@ export const ButtonLinkWrapper = styled.a<ButtonLinkWrapperProps>`
 `;
 
 export const ButtonIcon = styled.i`
-  font-size: ${({ theme }) =>
-    theme === "TextBoxHome" ? toRem(20) : toRem(16)};
+  font-size: ${({ theme }) => (theme === 'TextBoxHome' ? toRem(20) : toRem(16))};
   padding-right: ${toRem(10)}; ;
+  color: ${colors.defaultBlack}
 `;

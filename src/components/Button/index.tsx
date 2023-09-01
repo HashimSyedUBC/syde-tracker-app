@@ -1,6 +1,6 @@
-import React from "react";
-import * as Styled from "./styles";
-import { ButtonAnimation } from "../ButtonAnimation";
+import React from 'react';
+import * as Styled from './styles';
+import { ButtonAnimation } from '../ButtonAnimation';
 
 type ButtonProps = {
   theme?: string;
@@ -8,8 +8,9 @@ type ButtonProps = {
   onClick: (value: React.MouseEvent<HTMLButtonElement>) => void;
   buttonIcon: string;
   buttonText: string;
-  linkHref: string;
+  linkHref?: string;
   width: string;
+  height?: string
 };
 
 export const Button = ({
@@ -20,9 +21,11 @@ export const Button = ({
   buttonText,
   linkHref,
   width,
+  height,
 }: ButtonProps) => (
   <Styled.ButtonLinkWrapper href={linkHref} width={width}>
     <ButtonAnimation
+      height={height}
       id="id"
       onClick={onClick}
       theme={theme}

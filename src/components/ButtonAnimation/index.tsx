@@ -1,5 +1,5 @@
-import React, { Children, ReactNode } from "react";
-import * as Styled from "./styles";
+import React, { ReactNode } from 'react';
+import * as Styled from './styles';
 
 type ButtonProps = {
   id: string;
@@ -7,6 +7,7 @@ type ButtonProps = {
   disabled?: boolean;
   children: ReactNode;
   onClick: (value: React.MouseEvent<HTMLButtonElement>) => void;
+  height?: string
 };
 
 export const ButtonAnimation = ({
@@ -15,8 +16,10 @@ export const ButtonAnimation = ({
   disabled,
   onClick,
   children,
+  height,
 }: ButtonProps) => (
   <Styled.ButtonStyled
+    height={height}
     id={id}
     theme={theme}
     onClick={onClick}
