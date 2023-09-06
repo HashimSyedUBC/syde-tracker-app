@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, fonts } from "./theme";
 
 export const Page = styled.div`
-display: flex;
+    display: flex;
 `
 
 export const LeftSection = styled.div`
@@ -33,7 +33,7 @@ export const MainIcon = styled.i`
 
 `;
 
-export const ComapanyName = styled.span`
+export const CompanyName = styled.span`
     margin-top: 5%;
     color: ${colors.defaultWhite};
     ${fonts.H600}
