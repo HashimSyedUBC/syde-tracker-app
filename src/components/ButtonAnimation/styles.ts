@@ -25,7 +25,7 @@ export const ButtonStyled = styled.button<ButtonProps>`
   height: ${({ height }) => (height || 'auto')};;
   z-index: 0;
   border: none;
-  width: 100%;
+  width: max-content;
   cursor: pointer;
   position: relative;
   display: flex;

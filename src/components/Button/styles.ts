@@ -14,7 +14,6 @@ export const ButtonTextWrapper = styled.p`
 
 export const ButtonLinkWrapper = styled.a<ButtonLinkWrapperProps>`
   width: ${({ width }) => width};
-  min-width: ${toRem(140)};
   text-decoration: none;
   margin-top: -5px;
 `;
