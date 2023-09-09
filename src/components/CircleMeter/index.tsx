@@ -25,9 +25,6 @@ const Circle = styled.circle<{ strokeWidth: number; color: string }>`
   stroke: ${(props) => props.color};
   transition: stroke-dashoffset 0.3s ease;
   cursor: pointer;
-  &:hover {
-    stroke: orange;
-  }
   position: relative;
 `;
 
@@ -47,11 +44,14 @@ const CenterContent = styled.div`
 const ProgressCircle: React.FC<ProgressCircleProps> = ({
   size, strokeWidth, progressData, children,
 }) => {
+
   const [offsets, setOffsets] = useState<number[]>([]);
   const [endpointCoordinates, setEndpointCoordinates] = useState<{ x: number; y: number }[]>([]);
 
   useEffect(() => {
-    const newOffsets = progressData.map((segment) => (100 - segment.percent) * segment.circumference / 100);
+    const newOffsets = progressData.map((segment: any) => 
+       (100 - segment.percent) * segment.circumference / 100
+    );
     setOffsets(newOffsets);
 
     // Calculate endpoint coordinates for each color segment
@@ -81,9 +81,6 @@ const ProgressCircle: React.FC<ProgressCircleProps> = ({
                 strokeDasharray={segment.circumference}
                 strokeDashoffset={offsets[index]}
               />
-              <ForeignObject x={endpointCoordinates[index]?.x} y={endpointCoordinates[index]?.y} width="100" height="20">
-                <div>{segment.color}</div>
-              </ForeignObject>
             </g>
           );
         })}

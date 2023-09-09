@@ -9,7 +9,6 @@ export const GoogleLogin = styled.div`
 
 export const GoogleLoginButton = styled.div`
 
-
 `
 
 export const GoogleLoginDescript =styled.div`

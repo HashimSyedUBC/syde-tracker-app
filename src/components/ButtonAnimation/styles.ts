@@ -52,14 +52,14 @@ export const ButtonStyled = styled.button<ButtonProps>`
 
   &:hover {
     padding: ${toRem(16)} ${toRem(16)} ${toRem(16)} 0;
-    transition: all 0.5s linear;
+    transition: all 0.1s linear;
     color: ${colors.mainColor};
     p {
-      transition: all 0.5s linear;
+      transition: all 0.1s linear;
       padding: 0 0 0 ${toRem(12)};
     }
     i {
-      transition: all 0.5s linear;
+      transition: all 0.1s linear;
     }
     ${BackgroundAnimation} {
       transform: translateY(0%);
