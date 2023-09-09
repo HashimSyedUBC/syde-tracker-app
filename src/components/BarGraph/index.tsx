@@ -23,6 +23,7 @@ const TextWrapper = styled.span`
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
   margin-left: 10px;
+  margin-right: 10px;
   max-width: 90%;
 `;
 
@@ -41,6 +42,7 @@ const Bar = styled.div<{ color: string; width: number }>`
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflowing text */
   text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
+  min-width: 55px;
 `;
 
 const TitleStyled = styled.span`
