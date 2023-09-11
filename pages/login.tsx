@@ -11,7 +11,7 @@ export default function Login() {
                 </Styled.CompanyName>
             </Styled.LeftSection>
             <Styled.RightSection>
-                <GoogleLoginButton></GoogleLoginButton>
+                <GoogleLoginButton/>
             </Styled.RightSection>
         </Styled.Page>
     )
