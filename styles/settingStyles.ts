@@ -12,6 +12,7 @@ export const SettingsPage = styled.div`
     display : flex;
     flex-direction: column;
     padding: 64px;
+    margin-bottom: 20px;
 `
 export const Header = styled.div`
     display: flex;
@@ -30,7 +31,7 @@ export const WelcomeNote = styled.header`
 export const AccountDetailsText = styled.p`
     ${fonts.H500}
     font-weight: bolder;
-    line-height: 5rem;
+    line-height: 6rem;
 `
 export const FeildContainer = styled.div`
     display: flex;
@@ -49,7 +50,7 @@ export const EditableInput= styled.input`
     border-width: 1px;
     padding: 5px;
 `
-export const Email = styled.div`
+export const Email = styled.input`
     ${fonts.H200}
     border:solid;
     width: 40vw;
@@ -68,5 +69,5 @@ export const AddressSection = styled.div`
 `
 export const DeactivateAccountSection = styled.div`
     ${fonts.H200}
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 `

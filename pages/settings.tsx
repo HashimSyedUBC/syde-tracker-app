@@ -18,31 +18,29 @@ export default function settings() {
             <Styled.InputSection>
                 <Styled.FeildContainer>
                     <Styled.InputLabel> First Name </Styled.InputLabel>
-                    <Styled.EditableInput type='text' value={hook.firstName} onChange={(e) => hook.setFirstName(e.target.value)} />
+                    <Styled.EditableInput type='text' value={hook.firstName} onChange={(e) => hook.handleFirstNameChange(e.target.value)} />
                 </Styled.FeildContainer>
                 <Styled.FeildContainer>
                     <Styled.InputLabel> Last Name </Styled.InputLabel>
-                    <Styled.EditableInput type='text' value={hook.lastName} onChange={(e) => hook.setLastName(e.target.value)} />
+                    <Styled.EditableInput type='text' value={hook.lastName} onChange={(e) => hook.handleLastNameChange(e.target.value)} />
                 </Styled.FeildContainer>
             </Styled.InputSection>
 
             <Styled.InputSection> 
                 <Styled.FeildContainer>
                     <Styled.InputLabel> Email </Styled.InputLabel>
-                    <Styled.Email>
-                        {hook.emailAddress}
-                    </Styled.Email>
+                    <Styled.Email defaultValue={hook.emailAddress} disabled={true}/>
                 </Styled.FeildContainer>
             </Styled.InputSection>
 
             <Styled.InputSection>
                 <Styled.FeildContainer>
                     <Styled.InputLabel> Province </Styled.InputLabel>
-                    <Styled.EditableInput type='text' value={hook.province} onChange={(e) => hook.setProvince(e.target.value)} />
+                    <Styled.EditableInput type='text' value={hook.province} onChange={(e) => hook.handleProvinceChange(e.target.value)} />
                 </Styled.FeildContainer>
                 <Styled.FeildContainer>
                     <Styled.InputLabel> Country </Styled.InputLabel>
-                    <Styled.EditableInput type='text' value={hook.country} onChange={(e) => hook.setCountry(e.target.value)} />
+                    <Styled.EditableInput type='text' value={hook.country} onChange={(e) => hook.handleCountryChange(e.target.value)} />
                 </Styled.FeildContainer>
             </Styled.InputSection>
             <Button height="40px" width="fit-content" buttonText="SAVE" buttonIcon="" onClick={(e) => hook.handle()} />
