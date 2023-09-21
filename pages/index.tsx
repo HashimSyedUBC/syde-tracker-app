@@ -36,7 +36,7 @@ export default function Home() {
             <Styled.TitleWrapper>
               Progress
             </Styled.TitleWrapper>
-            <Button height="40px" width="fit-content" buttonText="SET TARGET" buttonIcon="fa-solid fa-bullseye" onClick={() => console.log('clciked')} />
+            <Button height="40px" width="fit-content" buttonText="SET TARGET" buttonIcon="fa-solid fa-bullseye" onClick={() => console.log('clicked')} />
           </Styled.HeaderWrapper>
           <Styled.CircleWrapper>
             <ProgressCircle size={hook.circleSize} strokeWidth={hook.circleStrokeWidth} progressData={hook.sortedProgressData}>
