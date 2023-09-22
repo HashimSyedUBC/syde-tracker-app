@@ -3,12 +3,14 @@ import { toRem } from '../src/utils/toRem';
 export const colors = {
   mainColor: '#F4BA99',
   broderGray: '#ADAAAA',
+  darkGray: '#5A5A5A',
   defaultWhite: '#FFFFFF',
   defaultBlack: '#000000',
   interviewPurple: '#7871D0',
   oaBlue: '#9FE4F3',
   rejectedRed: '#EA4D43',
   offerGreen: '#00F946',
+  lightGray: '#E1DDDD',
 };
 
 export const fonts = {

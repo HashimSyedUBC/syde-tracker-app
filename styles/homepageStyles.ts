@@ -10,6 +10,11 @@ export const NewPage = styled.div`
     flex-direction: column;
 `;
 
+export const TargetInputWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 export const RowWrapper = styled.div`
     margin: 64px 64px 0 64px;
     display: flex;
@@ -49,6 +54,11 @@ export const HeaderWrapper = styled.div`
     margin-bottom: 24px;
 `;
 
+export const ButtonWrapper = styled.div`
+    display: flex;
+    gap: 30px;
+`;
+
 export const TitleWrapper = styled.span`
     ${fonts.H600}
 `;
@@ -86,3 +96,43 @@ export const ViewCompaniesWrapper = styled.div`
     width: 180px;
     margin-top: 44px;
 `;
+
+export const DeleteModalContent = styled.div`
+    margin-bottom:  24px;
+    ${fonts.H200}
+`;
+
+export const SortModalContentWrapper = styled.div`
+    padding: 24px;
+    border: 1px solid ${colors.broderGray};
+    width: 100%;
+`;
+
+export const SortSubtitle = styled.span`
+    width: 100%;
+    justify-content: flex-start;
+    ${fonts.H400}
+`;
+
+export const Description = styled.span`
+    ${fonts.H200}
+    margin: 24px 0 24px 0;
+`;
+
+export const ReviewWrapper = styled.div`
+    width: fit-content;
+    border: 1px solid ${colors.defaultBlack};
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+`;
+
+export const RowWrapperInput = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    gap:50px;
+`;
+

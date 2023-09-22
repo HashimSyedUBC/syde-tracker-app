@@ -25,7 +25,6 @@ export const ButtonAnimation = ({
     onClick={onClick}
     disabled={disabled}
   >
-    <Styled.BackgroundAnimation theme={theme} />
     {children}
   </Styled.ButtonStyled>
 );

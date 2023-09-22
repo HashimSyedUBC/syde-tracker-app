@@ -7,3 +7,5 @@ export const STAGE_NAMES = {
     TARGET: "Target",
 }
 
+export const POTENTIAL_COLUMNS = ['Date', 'Name', 'Sender', 'Message', 'Stage'];
+

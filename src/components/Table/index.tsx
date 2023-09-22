@@ -6,7 +6,10 @@ import { useState } from 'react';
 
 interface TableProps {
   columns: string[];
-  data: Record<string, ReactNode>[];
+  data: Record<string, any>[];
+  headerChecked: boolean
+  handleHeaderChecked: (value: boolean) => void
+  handleRowChecked: (sender: string) => void
 }
 
 const TableWrapper = styled.table`
@@ -29,14 +32,13 @@ const TableCell = styled.td`
   padding: 16px;
 `;
 
-const TableComponent: React.FC<TableProps> = ({ columns, data }) => {
-    const [checked, setChecked] = useState(false)
+const TableComponent: React.FC<TableProps> = ({ columns, data, headerChecked, handleHeaderChecked, handleRowChecked }) => {
   return (
     <TableWrapper>
       <thead>
         <tr>
            <TableHeader>
-           <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
+           <Checkbox checked={headerChecked} onChange={() => handleHeaderChecked(!headerChecked)} />
            </TableHeader>
           {columns.map((column, index) => (
             <TableHeader key={index}>{column}</TableHeader>
@@ -44,10 +46,11 @@ const TableComponent: React.FC<TableProps> = ({ columns, data }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map((row, rowIndex) => (
+        {data?.map((row, rowIndex) => {
+         return (
           <tr key={rowIndex}>
             <TableCell>
-                <Checkbox checked={checked} onChange={() => console.log('s')} />
+                <Checkbox checked={row?.Checked} onChange={() => handleRowChecked(row.Id)} />
             </TableCell>
             {columns.map((column, colIndex) => (
               <TableCell key={colIndex}>
@@ -55,7 +58,7 @@ const TableComponent: React.FC<TableProps> = ({ columns, data }) => {
               </TableCell>
             ))}
           </tr>
-        ))}
+        )})}
       </tbody>
     </TableWrapper>
   );
