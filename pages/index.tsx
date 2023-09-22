@@ -12,9 +12,18 @@ import Modal from '../src/components/Modal';
 import InputText from '../src/components/TextInput';
 import InputTextArea from '../src/components/InputTextArea';
 import ErrorBanner from '../src/components/ErrorBanner';
+import StyledOption from '../src/components/SelectOption';
+import SelectOption from '../src/components/SelectOption';
 
 export default function Home() {
   const hook = useDashboard();
+  const statusOptions = [
+    { value: 'applied', label: 'Applied' },
+    { value: 'interview', label: 'Interview' },
+    { value: 'online assement', label: 'Online Assessment' },
+    { value: 'rejected', label: 'Rejected' },
+    { value: 'offer', label: 'Offer' },
+  ];
   return (
     <>
       <Styled.RowWrapper>
@@ -92,7 +101,7 @@ export default function Home() {
           <InputText label='Sender' placeholder='' value={hook.selectedApplications[hook.currentEmailIndex]?.Sender || ''} onChange={() => console.log('')} disabled required />
           </Styled.RowWrapperInput>
           <Styled.RowWrapperInput>
-          <InputText label='Stage' placeholder='' value={hook.currentEmailStage} onChange={hook.handleCompanyStage} required/>
+          <SelectOption label='Stage' options={statusOptions} value={""} onChange={hook.handleCompanyStage} />
           <InputText label='Company Name' placeholder='' value={hook.currentEmailCompanyName} onChange={hook.handleCompanyName} required/>
           </Styled.RowWrapperInput>
           <Styled.RowWrapperInput>

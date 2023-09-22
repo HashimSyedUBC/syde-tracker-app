@@ -31,6 +31,8 @@ const ModalWrapper = styled.div<ModalProps>`
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  max-height: 100vh;
+  overflow-y: auto;
 `;
 
 const ModalContent = styled.div`

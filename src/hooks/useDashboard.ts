@@ -188,7 +188,7 @@ export const useDashboard = () => {
     setEmailCompanyName(e.target.value);
   };
 
-  const handleCompanyStage = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCompanyStage = ( e: React.ChangeEvent<HTMLSelectElement>) => {
     setCurrentEmailStage(e.target.value);
   };
 
